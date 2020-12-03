@@ -1,0 +1,20 @@
+name: cd
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v0.0.*
+
+
+jobs:
+
+  job1:
+    name: job1
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: step1
+        run: |
+          env
