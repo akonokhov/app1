@@ -1,0 +1,20 @@
+name: test
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+
+  job1:
+    name: job1
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: step1
+        run: echo "test - step1"
