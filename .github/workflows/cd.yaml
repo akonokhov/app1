@@ -18,3 +18,9 @@ jobs:
 
       - name: step1
         run: echo "cd - step1"
+
+      - name: step2
+        env:
+          WORKFLOW_FILE_NAME: 'cd.yaml'
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        run: ./cancel.py
