@@ -27,3 +27,6 @@ jobs:
           WORKFLOW_FILE_NAME: 'cd.yaml'
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: ./cancel.py
+
+      - name: Step2
+        run: sleep 60
