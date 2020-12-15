@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v0.1.*'
+      - 'v0.2.*'
   pull_request:
     types:
       - opened
@@ -13,7 +16,6 @@ on:
       - main
 
 jobs:
-
   job1:
     name: job1
     runs-on: ubuntu-20.04
