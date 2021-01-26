@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ${SCRIPTS_PATH}/shell.sh
+set -eux
+set -o pipefail
 
 curl -i -X POST \
   -H "Authorization: token ${GITHUB_TOKEN}" \
