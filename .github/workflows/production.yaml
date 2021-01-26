@@ -1,0 +1,19 @@
+name: production
+
+on:
+  repository_dispatch:
+    types:
+      - 'production_deploy'
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: Checkout application repository
+        uses: actions/checkout@v2
+
+      - name: Step1
+        run: |
+          env | grep GITHUB | sort

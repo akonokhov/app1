@@ -1,22 +1,9 @@
-name: cd
+name: staging
 
 on:
   push:
     branches:
       - main
-    tags:
-      - 'v0.1.*'
-      - 'v0.2.*'
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-    branches:
-      - main
-  repository_dispatch:
-    types:
-      - 'type1'
 
 jobs:
   job1:
@@ -30,3 +17,8 @@ jobs:
       - name: Step1
         run: |
           env | grep GITHUB | sort
+
+      - name: Trigger Production workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./trigger_production.sh
