@@ -20,5 +20,5 @@ jobs:
 
       - name: Trigger Production workflow
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.APP1_GITHUB_TOKEN }}
         run: ./trigger_production.sh
